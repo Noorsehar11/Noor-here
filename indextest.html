@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            height: 200px;
+            width: 200px;
+            color: transparent;
+            /* margin: auto; */
+        }
+
+        #one {
+            background-color: red;
+        }
+
+        #two {
+            background-color: blue;
+            left: 35px;
+            top: 40px;
+            position: absolute;
+        }
+
+        #three {
+            background-color: purple;
+            position: absolute;
+            left: 65px;
+            top: 72px;
+
+        }
+
+        #four {
+            background-color: tomato;
+            position: absolute;
+            top: 120px;
+            left: 100px;
+
+        }
+
+        #five {
+            background-color: orange;
+            position: absolute;
+            top: 150px;
+            left: 140px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="margin">
+
+        <div onclick="one()" class="box" id="one">red</div>
+        <div onclick="two()" class="box" id="two">blue</div>
+        <div onclick="three()" class="box" id="three">purple</div>
+        <div onclick="four()" class="box" id='four'>tomato</div>
+        <div onclick="five()" class="box" id="five">orange</div>
+    </div>
+    <script>
+
+        function one() {
+            // let red=document.getElementById('one')
+            let color1 = document.getElementById('one');
+            color1.nextElementSibling.style.backgroundColor = color1.innerHTML;
+            color1.nextElementSibling.innerHTML = color1.innerHTML;
+        }
+        function two(color) {
+            let color1 = document.getElementById('two');
+            color1.previousElementSibling.style.backgroundColor = color1.innerHTML;
+            color1.nextElementSibling.style.backgroundColor = color1.innerHTML;
+            color1.previousElementSibling.innerHTML = color1.innerHTML;
+            color1.nextElementSibling.innerHTML = color1.innerHTML;
+
+        }
+        function three(color) {
+            let color1 = document.getElementById('three');
+            color1.previousElementSibling.style.backgroundColor = color1.innerHTML;
+            color1.nextElementSibling.style.backgroundColor = color1.innerHTML;
+            color1.previousElementSibling.innerHTML = color1.innerHTML;
+            color1.nextElementSibling.innerHTML = color1.innerHTML;
+
+        }
+        function four(color) {
+            let color1 = document.getElementById('four');
+            color1.previousElementSibling.style.backgroundColor = color1.innerHTML;
+            color1.nextElementSibling.style.backgroundColor = color.innerHTML;
+            color1.previousElementSibling.innerHTML = color1.innerHTML;
+            color1.nextElementSibling.innerHTML = color1.innerHTML;
+
+        }
+        function five(color) {
+            let color1 = document.getElementById('five');
+            color1.previousElementSibling.style.backgroundColor = color1.innerHTML;
+            color1.previousElementSibling.innerHTML = color1.innerHTML;
+        }
+    </script>
+</body>
+
+</html>
